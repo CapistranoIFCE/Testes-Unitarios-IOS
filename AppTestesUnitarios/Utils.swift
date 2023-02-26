@@ -30,6 +30,8 @@ class Utils {
 
     static func random(upperBound: Int) -> Int {
         return Int.random(in: 0...upperBound)
-
+    }
+    static func trim(text: String) -> String {
+        return text.trimmingCharacters(in: .whitespaces)
     }
 }

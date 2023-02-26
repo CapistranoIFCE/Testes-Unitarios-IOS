@@ -34,9 +34,18 @@ final class UtilsTests: XCTestCase {
         XCTAssertFalse(resultFalse)
     }
 
+// 02 - Func
     func testRandom(){
         let upperBound = 1000
         let result = Utils.random(upperBound: upperBound)
         XCTAssertTrue(result >= 0 && result <= upperBound, "O número sorteado não pode ser menor que zero ou maior que o upperBound!")
+    }
+
+// 03 - Func
+    func testTrim(){
+        let text = "        Test Exemplo        "
+        let expected = "Test Exemplo"
+        let result = Utils.trim(text: text)
+        XCTAssertEqual(expected, result, "Os textos não condiz por causa dos espaços")
     }
 }
